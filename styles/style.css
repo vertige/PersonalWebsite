@@ -1,0 +1,214 @@
+/* BASE RULES & OVERRIDES FOR DEFAULT BROWSER STYLES*/
+html {
+  font-size: 80%;
+  height: 100%;
+}
+
+* {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  line-height: 1rem;
+  margin: 0;
+  padding: 0;
+  color: DimGrey;
+}
+
+body {
+  height: 100%;
+}
+
+.override article { padding: 1rem .5rem; margin: 1rem auto; }
+.override h1 { font-size: 4.8rem; line-height: 1.4; text-align: center; }
+.override h2 { font-size: 2.4rem; line-height: 1.4; }
+.override h3 { font-size: 2.0rem; line-height: 1.4; font-family: 'Zilla Slab', serif; padding-bottom: .25rem; }
+.override h4 { font-size: 1.6rem; line-height: 1.4; font-style: italic; }
+.override p, cite, li { font-size: 1.6rem; line-height: 1.4; padding-bottom: 1rem; }
+.override ul { text-decoration: none; }
+.override a, a:hover, a:visited, a:active, a:link { text-decoration: none; color: Teal; }
+.override a:hover { color: DarkCyan; }
+.override img { width: 100%; }
+
+/*FIXED HEADER*/
+header {
+  display: inline;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: Coral;
+}
+
+.override header h1 {
+  float: left;
+  width: 20%;
+  margin: 0 0 0 5%;
+  padding: 2rem 0;
+  text-align: left;
+  color: DimGrey;
+}
+
+.override header a {
+  color: DimGrey;
+}
+
+header nav {
+  float: right;
+  width: 70%;
+  margin-right: 5%;
+  text-align: right;
+}
+
+#menu li {
+  font-size: 1.8rem;
+  line-height: calc((4.8rem * 1.4) + 4rem);
+  display: inline;
+  padding-left: 5%;
+}
+
+/*MAIN CONTENT AREA*/
+main {
+  display: flow-root;
+  padding: 14.6rem 10% 10rem 10%; /*for header */
+}
+
+main h3, main h4 {
+  text-align: right;
+}
+
+main p {
+  text-align: justify;
+}
+
+.intro {
+  margin-bottom: 3rem;
+}
+
+.left, .right, .double {
+  width: 100%;
+}
+
+.tint {
+  background: Teal;
+}
+
+.two-column img, .three-column img, .tint {
+  border-radius: 50%;
+}
+
+
+a img:hover {
+  opacity: .5;
+}
+
+.find-me li {
+  display: block;
+  padding: 5% 0;
+  text-align: left;
+}
+
+.find-me i {
+  font-size: 3rem;
+  padding-right: 2rem;
+  color: Teal;
+}
+
+/* FOOTER */
+.wrapper { /* to keep footer from floating up depending on window size */
+  min-height: calc(100% - 16rem);
+  padding-bottom: 16rem;
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*min-height: 10rem;*/
+  width: calc(100% - 4rem);
+  background-color: MistyRose;
+  padding: 2rem;
+}
+
+#copyright {
+  float: left;
+  width: 40%;
+  font-size: 1rem;
+}
+
+footer nav {
+  float: right;
+  width: 30%;
+  text-align: right;
+}
+
+#icons li {
+  display: inline;
+  padding-left: 5%;
+  font-size: 2rem;
+}
+
+/* Quote Setup */
+q {
+  quotes: "“" "”" "‘" "’";
+  font-family: 'IM Fell Great Primer', serif;
+  font-size: 3rem;
+}
+
+q::before {
+  content:open-quote;
+}
+
+q::after {
+  content:close-quote;
+  clear:both;
+}
+
+.quote-of-the-day {
+  font-style: italic;
+  text-align: center;
+  max-width: 60rem;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+
+.quote-of-the-day h3 {
+  display: inline;
+  font-family: 'Zilla Slab', serif;
+}
+
+.quote-of-the-day cite {
+  display: block;
+}
+
+/* LARGER THAN MOBILE */
+@media (min-width: 700px) {
+  html {
+    font-size: 62.5%
+  }
+  .left {
+    float:left;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .two-column, three-column, .double {
+    max-width: 114rem;
+    padding: 0 auto;
+  }
+
+  .two-column section {
+    width: 48%;
+  }
+
+  .three-column section {
+    width: 31%;
+    margin: 0 1%;
+  }
+
+  .double {
+    width: 65%;
+    float: right;
+  }
+}
