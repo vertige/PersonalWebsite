@@ -106,7 +106,7 @@ a img:hover {
   text-align: left;
 }
 
-.find-me i {
+i, .find-me i {
   font-size: 3rem;
   padding-right: 2rem;
   color: Teal;
